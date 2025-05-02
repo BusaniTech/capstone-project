@@ -1,0 +1,8 @@
+{% extends "blog_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-outline-light">Logout</button>
+</form>
+ {% endblock content %}
